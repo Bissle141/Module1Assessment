@@ -78,7 +78,8 @@ let gitAddCode = "git add ."; //will add 'this' or all files within the working 
 
 //CODE HERE
 
-const gitCommitDefinitionq = "git commit takes a snapshot of the staging area and commits it to the projects history, can be used with -m flag to add a comment, the --amend flag can also be used to ammend of alter the recently made commit. ammend would look something like (git commit --ammend -m'comment') ";
+const gitCommitDefinitionq = 'git commit takes a snapshot of the staging area and commits it to the projects history, can be used with -m flag to add a comment, the --amend flag can also be used to amend of alter the recently made commit. amend would look something like: git commit --amend -m"comment"';
+let gitCommitCode = 'git commit -m"initial commit"';
 
 //////////////////PROBLEM 8////////////////////
 /*
@@ -87,3 +88,5 @@ const gitCommitDefinitionq = "git commit takes a snapshot of the staging area an
 */
 
 //CODE HERE
+
+const gitPushDefinition = 'git push is used to initially upload your(local) repo to a remote repo(i.e. github) and later on to upload commits/changes in a similar manner';
