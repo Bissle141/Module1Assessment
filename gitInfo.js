@@ -10,8 +10,7 @@
 */
 
 //CODE HERE
-//gonna use let becuase this is my def and someone else might have a diff way to say it
-let gitDefinition = "Git is a version control system used to manage projects. It can be used to update files and keep records of past iterations of whever files are stored within the repo. very handy for coding";
+let gitDefinition = "Git is a version control system used to manage projects. It can be used to update files and keep records of past iterations of whatever files are stored within the repo. very handy for coding";
 
 //////////////////PROBLEM 2////////////////////
 /*
@@ -20,7 +19,6 @@ let gitDefinition = "Git is a version control system used to manage projects. It
 */
 
 //CODE HERE
-//again gonna use let for the same reason stated on line 13
 let gitHubDefinition = "Git hub is a hosting site used by developers to store/share their code and utilze the version control while collaborating with others. It allowes for repos to be shared and stored in the cloud rather than your local system. It also allows for collaboration and for multiple people to push and pull from said repos.";
 
 //////////////////PROBLEM 3////////////////////
@@ -30,8 +28,7 @@ let gitHubDefinition = "Git hub is a hosting site used by developers to store/sh
 */
 
 //CODE HERE
-//const bc i dont think git inits function is going to change any time soon
-const gitInitDefinition = "git init is a terminal command which will initilize a repo within the folder you are in,";
+let gitInitDefinition = "git init is a terminal command which will initilize/create a repo within the folder you are in,";
 
 //////////////////PROBLEM 4////////////////////
 /*
@@ -40,8 +37,7 @@ const gitInitDefinition = "git init is a terminal command which will initilize a
 */
 
 //CODE HERE
-//it's in my words, so let it is. 
-let gitCloneDefinition = "git clone will clone the working repo and create a new directory for it. Could be utilized in version control as cloing the repo can allow you to make changes that will not effect the original code.";
+let gitCloneDefinition = "git clone will clone the working repo and create a new directory for it. Could be utilized in version control as cloing the repo can allow you to make changes that will not effect the original code which you could then push back.";
 
 //////////////////PROBLEM 5////////////////////
 /*

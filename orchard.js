@@ -57,9 +57,7 @@ let totalAcres = 0;
 //condition could use length, but becuase this is related to days of the week i will use 7.
 for(let i = 0; i < 7; i++){
     //go through each array and add the num at the index of i, to the total
-    totalAcres += fujiAcres[i];
-    totalAcres += galaAcres[i];
-    totalAcres += pinkAcres[i];
+    totalAcres += fujiAcres[i] + galaAcres[i] + pinkAcres[i];
 }
 console.log('total acres harvested over the week,', totalAcres);
 
@@ -78,7 +76,7 @@ console.log('total acres harvested over the week,', totalAcres);
 
 // CODE HERE
 //to find avg, devide total by num of days per week, 7. This will give us the avg across the three acereages
-let averageDailyAcres = totalAcres/7;
+let averageDailyAcres = totalAcres / 7;
 console.log('average num of acres harvested daily is,', averageDailyAcres);
 
 
@@ -88,7 +86,7 @@ console.log('average num of acres harvested daily is,', averageDailyAcres);
     We have provided 2 variables below. 
     
     The `acresLeft` variable is the number 
-    of acres that still have apples left. 
+    of acres that still have apples left.   
     
     The `days` variable represents how 
     many more days of work are left. It's 
@@ -115,11 +113,17 @@ let acresLeft = 174
 let days = 0
 
 // CODE HERE
-//floowing steps above, first creat while loop which runs as long as acres left is > 0, inside it will add to days and subtract the avg from acres left
+//following steps above, first creat while loop which runs as long as acres left is > 0, inside it will add to days and subtract the avg from acres left
 
 //Another way to do it, which i perfer bc it's one line is to use the Math.round() function built into javascript, this will round the outcome of your equation to the nearest integer.
 //you could also use Math.floor() to round down to the nearest integer, but in this case i left in on round because if it takes more than half a day to complete the final bit i think the number should reflect that by rounding up.
-days = Math.round(174/averageDailyAcres);
+
+while(acresLeft > 0) {
+    acresLeft -= averageDailyAcres
+    days += 1;
+}
+
+// days = Math.ceil(174/averageDailyAcres);
 
 console.log('It will take about', days, 'to complete the harvesting.');
 
@@ -149,19 +153,34 @@ console.log('It will take about', days, 'to complete the harvesting.');
 
 // CODE HERE
 //set new vars =  0, then using a for loop to iterate through the arrays, take the given indexed num multiply by 6.5 and add it too the corisponding var 
-let fujiTons = 0;
-let galaTons = 0;
-let pinkTons = 0;
+// let fujiTons = 0;
+// let galaTons = 0;
+// let pinkTons = 0;
+
+// for(let i = 0; i < 7; i++){
+//     fujiTons += fujiAcres[i]*6.5;
+//     galaTons += galaAcres[i]*6.5;
+//     pinkTons += pinkAcres[i]*6.5;
+// }
+
+// console.log('Fuji acres yilds:', fujiTons, 'tons.');
+// console.log('Gala acres yilds:', galaTons, 'tons.');
+// console.log('Puji acres yilds:', pinkTons, 'tons.');
+
+let fujiTons = [];
+let galaTons = [];
+let pinkTons = [];
 
 for(let i = 0; i < 7; i++){
-    fujiTons += fujiAcres[i]*6.5;
-    galaTons += galaAcres[i]*6.5;
-    pinkTons += pinkAcres[i]*6.5;
+    fujiTons.push(fujiAcres[i]*6.5);
+    galaTons.push(galaAcres[i]*6.5);
+    pinkTons.push(pinkAcres[i]*6.5);
 }
 
-console.log('Fuji acres yilds:', fujiTons, 'tons.');
-console.log('Gala acres yilds:', galaTons, 'tons.');
-console.log('Puji acres yilds:', pinkTons, 'tons.');
+console.log('Fuji acres:', fujiTons);
+console.log('Gala acres:', galaTons);
+console.log('Puji acres:', pinkTons);
+
 
 // PROBLEM 5
 
@@ -181,9 +200,18 @@ console.log('Puji acres yilds:', pinkTons, 'tons.');
 
 // CODE HERE 
 //just take tons times 2000 and set to the pounds var
-let fujiPounds = fujiTons*2000;
-let galaPounds = galaTons*2000;
-let pinkPounds = pinkTons*200;
+let fujiTotalTons = 0;
+let galaTotalTons = 0;
+let pinkTotalTons = 0;
+
+for (let i = 0; i < 7; i++){
+    fujiTotalTons += fujiTons[i]
+    galaTotalTons += galaTons[i]
+    pinkTotalTons += pinkTons[i]
+}
+let fujiPounds = fujiTotalTons*2000;
+let galaPounds = galaTotalTons*2000;
+let pinkPounds = pinkTotalTons*2000;
 
 console.log('Fuji yeilds,', fujiPounds, 'pounds.');
 console.log('Gala yeilds,', galaPounds, 'pounds.');
